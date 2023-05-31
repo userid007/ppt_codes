@@ -21,11 +21,18 @@ using namespace std;
 class Solution
 {
 public:
-  int maximum_Score(vector<int> &nums, int k)
+  int minimum_Score(vector<int> &nums, int k)
   {
-    int max = *min_element(nums.begin(), nums.end());
+    int max = *max_element(nums.begin(), nums.end());
     int min = *min_element(nums.begin(), nums.end());
-    return max - min + (2 * k);
+    if ((max - min) > (2 * k))
+    {
+      return max - min - (2 * k);
+    }
+    else
+    {
+      return 0;
+    }
   }
 };
 
@@ -41,6 +48,6 @@ int main()
   }
 
   Solution S;
-  cout << S.maximum_Score(nums, k) << endl;
+  cout << S.minimum_Score(nums, k) << endl;
   return 0;
 }
