@@ -52,25 +52,35 @@ public:
 
 int main()
 {
-  int n;
-  cin >> n;
-
-  struct ListNode *head, *temp;
-
-  cin >> head->val;
-  temp = head;
-  for (int i = 1; i < n; i++)
-  {
-    cin >> temp->val;
-    temp = temp->next;
-  }
+  struct ListNode *head = new ListNode(1);
+  head->next = new ListNode(2);
+  head->next->next = new ListNode(3);
+  head->next->next->next = new ListNode(4);
+  head->next->next->next->next = new ListNode(5);
 
   Solution S;
-  head = S.deleteMiddle(head);
-  while (head != NULL)
+  ListNode *ans = S.deleteMiddle(head);
+  while (ans != nullptr)
   {
-    cout << head->val;
-    head = head->next;
+    cout << ans->val << " ";
+    ans = ans->next;
   }
+  cout << endl;
+
+  head = new ListNode(2);
+  head->next = new ListNode(4);
+  head->next->next = new ListNode(6);
+  head->next->next->next = new ListNode(7);
+  head->next->next->next->next = new ListNode(5);
+  head->next->next->next->next->next = new ListNode(1);
+
+  ans = S.deleteMiddle(head);
+  while (ans != nullptr)
+  {
+    cout << ans->val << " ";
+    ans = ans->next;
+  }
+  cout << endl;
+
   return 0;
 }
