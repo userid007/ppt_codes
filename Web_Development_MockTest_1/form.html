@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      input {
+        margin: 4px;
+        padding: 2px 6px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+      }
+      body {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Form</h1>
+      <form>
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="name"
+          minlength="3"
+          required
+        />
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email"
+          required
+        />
+        <br />
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="phone number"
+          required
+        />
+        <br />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+          minlength="8"
+          required
+        />
+        <br />
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="age"
+          min="0"
+          required
+        />
+        <br />
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="M" value="M" required />
+        <label for="M">M</label>
+        <input type="radio" name="gender" id="F" value="F" required />
+        <label for="F">F</label>
+        <br />
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required />
+        <br />
+        <label for="date">Color:</label>
+        <input type="color" name="color" id="color" required />
+        <br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>
