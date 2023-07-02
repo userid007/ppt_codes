@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS positions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex gap-5 flex-wrap justify-center">
+      <div class="h-96 w-96 bg-red-100">
+        <h1 class="text-center text-4xl mt-5">Static</h1>
+        <div
+          class="static h-20 right-10 w-20 bg-red-300 border-2 border-black"
+        ></div>
+        <div
+          class="static h-20 left-40 w-20 bg-green-300 border-2 border-black text-center"
+        >
+          Static
+        </div>
+        <div
+          class="static h-20 top-10 w-20 bg-blue-300 border-2 border-black"
+        ></div>
+      </div>
+      <div class="h-96 w-96 bg-red-100">
+        <h1 class="text-center text-4xl mt-5">Relative</h1>
+        <div
+          class="static bottom-10 h-20 w-20 bg-red-300 border-2 border-black"
+        ></div>
+        <div
+          class="relative left-40 h-20 w-20 bg-green-300 border-2 border-black text-center"
+        >
+          Relative
+        </div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+      </div>
+      <div class="h-96 w-96 bg-red-100 relative">
+        <h1 class="text-center text-4xl mt-5">Absolute</h1>
+        <div
+          class="static bottom-10 h-20 w-20 bg-red-300 border-2 border-black"
+        ></div>
+        <div
+          class="absolute left-20 h-20 w-20 bg-green-300 border-2 border-black text-center"
+        >
+          Absolute
+        </div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+      </div>
+      <div class="h-96 w-96 bg-red-100">
+        <h1 class="text-center text-4xl mt-5">Fixed</h1>
+        <div
+          class="static bottom-10 h-20 w-20 bg-red-300 border-2 border-black"
+        ></div>
+        <div
+          class="fixed right-56 h-20 w-20 bg-green-300 border-2 border-black text-center"
+        >
+          Fixed
+        </div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+      </div>
+      <div class="h-96 w-96 bg-red-100 overflow-auto">
+        <h1 class="text-center text-4xl mt-5">Sticky</h1>
+        <div class="static h-20 w-20 bg-red-300 border-2 border-black"></div>
+        <div
+          class="sticky top-0 h-20 w-20 bg-green-300 border-2 border-black text-center"
+        >
+          Sticky
+        </div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+        <div class="static h-20 w-20 bg-red-300 border-2 border-black"></div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+        <div class="static h-20 w-20 bg-red-300 border-2 border-black"></div>
+        <div class="static h-20 w-20 bg-blue-300 border-2 border-black"></div>
+      </div>
+    </div>
+  </body>
+</html>
