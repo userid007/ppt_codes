@@ -69,8 +69,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
-    </div>
+    <div class="container"></div>
 
     <script>
       let card = `<div class="card">
@@ -94,8 +93,8 @@
           cards[i].children[0].innerHTML = json[i].title;
           cards[i].children[1].className = "";
           cards[i].children[1].innerHTML = json[i].completed
-            ? "Completed"
-            : "Uncompleted";
+            ? "Complete"
+            : "Incomplete";
         }
       }
 
